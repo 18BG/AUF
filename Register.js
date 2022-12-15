@@ -18,7 +18,7 @@ const [ pwd, setPwd ] = useState('')
 const [ name, setName ] = useState('')
 
 
-const handle = async () => {
+const handleRegister = async () => {
   createUserWithEmailAndPassword(auth, email, pwd)
     .then(async userCredentials => {
       const currentUser = userCredentials.user;
@@ -118,7 +118,7 @@ const handle = async () => {
         width: 130,
         alignSelf: 'auto'
       }}
-      onPress={() => handle()}
+      onPress={() => handleRegister()}
       >
         <Text>create account</Text>
         
